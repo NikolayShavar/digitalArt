@@ -1,0 +1,54 @@
+.top_menu 
+    display: flex
+    justify-content: space-between
+    max-height: 104px
+    @include media ($xl)
+        margin: 0 111px
+    @include media ($md)
+        margin: 0 40px
+        font-size: 14px
+    @include media ($sm)
+        flex-direction: column
+        margin: 0 10px
+        align-items: center
+    &-main
+        display: flex
+        margin: 39px 0
+        gap: 40px
+        @include media ($md)
+            padding-right: 10px
+        @include media ($sm)
+            margin: 5px 0
+            padding-right: 0
+            gap: 15px
+
+        &-item 
+            max-height: 26px
+
+            a:hover 
+                text-decoration: underline
+                text-decoration-thickness: 2px
+                text-decoration-color: #D6EF0E
+                text-underline-offset: 3px
+
+
+    &-btn
+        display: flex
+        margin: 29px 0 
+        background-color: #D6EF0E
+        color: #fff
+        padding: 14.5px 40px
+        border-radius: 8px
+        cursor: pointer
+        @include media ($md)
+            padding: 10px 20px
+        @include media ($sm)
+            padding: 10px 100px
+            margin: 5px 0
+
+        &-item 
+            font-weight: 700
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
