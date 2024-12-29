@@ -6,6 +6,7 @@
   color: #FFFFFDB8 
   margin: 0 auto
   border-radius: 20px
+
 .hero::after
   content: ''
   position: absolute
@@ -17,3 +18,37 @@
   background-size: cover
   background-position: top
   z-index: -1
+
+//Зеленая кнопка
+
+.yellow-btn
+    display: flex
+    margin: 29px 0 
+    background-color: #D6EF0E
+    color: #fff
+    padding: 14.5px 40px
+    border-radius: 8px
+    cursor: pointer
+    @include media ($md)
+        padding: 10px 20px
+    @include media ($sm)
+        padding: 10px 100px
+        margin: 5px 0
+
+    &-item 
+        font-weight: 700
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+
+// Кнопка с подчеркиванием
+
+.hover-btn 
+    max-height: 26px
+
+    a:hover 
+        text-decoration: underline
+        text-decoration-thickness: 2px
+        text-decoration-color: #D6EF0E
+        text-underline-offset: 3px
