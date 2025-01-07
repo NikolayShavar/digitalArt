@@ -1,7 +1,17 @@
 .dac
+    .container
+        display: flex
+        justify-content: space-between
+        @include media ($xl)
+            margin: 0 111px
+        @include media ($lg)
+            flex-direction: column
+            justify-items: center
+            justify-content: center
+            align-items: center
+            margin: auto
+.dac
     margin: 92px 0
-    display: flex
-    justify-content: space-between
 
     &-first
         max-width: 544px
@@ -14,6 +24,11 @@
     font-weight: 500
     color: #FFFFFD
     margin: 20px 0
+    @include media ($md)
+        font-size: 42px
+    @include media ($sm)
+        font-size: 32px
+        margin: 20px
 
     span
         color: $wd2
@@ -24,11 +39,21 @@
     font-weight: 400
     line-height: 160%
     margin-bottom: 40px
+    @include media ($md)
+        font-size: 14px
+    @include media ($sm)
+        margin: 20px
 
 .dac-first__btns
     display: flex
     max-width: 303px
-    // &-explore
+    &-explore
+        @include media ($md)
+        padding: 10px 50px
+
+    @include media ($md)
+        max-width: 300px
+    
     &-learn
         margin: auto 0
         padding-left: 36px
@@ -36,6 +61,8 @@
 .dac-first__results
     display: flex
     margin-top: 52px
+    @include media ($md)
+        margin-left: 20px
 
 
 .dac-first__results-item
@@ -50,6 +77,8 @@
         font-weight: 500
         color: $wd1
         margin:8px 0
+        @include media ($md)
+            font-size: 32px
         
         span
             color: $wd2
@@ -60,6 +89,8 @@
         font-weight: 400
         line-height: 160%
         margin-top: 8px
+        @include media ($md)
+            font-size: 14px
 
 .dac-first__results-item1
     padding-right: 28px
@@ -68,3 +99,58 @@
 .dac-first__results-item2
     padding-right: 26px
     border-right: 2px solid $wd2
+
+
+    //-------------------------
+
+.dac-second
+    &__box
+        position: relative
+        @include media ($lg)
+            margin-top: 40px
+
+    
+        &-bit
+            font-style: inter
+            border-radius: 15px
+            background-color: #131E3A
+            position: absolute
+            bottom: -93px
+            right: -51px
+            z-index: 2
+            border-top: 2px solid $wd2
+            width: 304px
+            @include media ($xl)
+                right: 50px
+            @include media ($xs)
+                right: unset
+                left: 0
+            &__first
+                display: flex
+                font-weight: 400
+                margin: 20px 20px 8px 20px
+                justify-content: space-between
+                color: $wd2
+            &__second
+                display: flex
+                font-weight: 700
+                margin:0 20px 24px 20px
+                justify-content: space-between
+                color: #FFFFFD
+
+.bit-btn
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid $wd2
+    background-color: #131E3A
+    color: $wd2
+    padding: 14.5px 40px
+    border-radius: 8px
+    cursor: pointer
+    margin: 0 20px 20px 20px
+    font-weight: 700
+    font-size: 16px
+    line-height: 160%
+    width: 264px
+    height: 52px
